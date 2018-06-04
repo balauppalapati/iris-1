@@ -1,0 +1,18 @@
+{
+  // Circuit Breaker
+  "circuit-breaker.name": "circuit-breaker",
+  "circuit-breaker.max-failures": 5,
+  "circuit-breaker.timeout": 10000,
+  "circuit-breaker.reset-timeout": 30000,
+  // Consul
+  "consul.host": "localhost",
+  "consul.port": 8500,
+  "consul.data-center": "dc1",
+  // API Gateway
+  "api-gateway.http.host": "0.0.0.0",
+  "api-gateway.http.port": 9000,
+  "api-gateway.frontend.path": "web",
+  // Sources
+  "data-sources.http.host": "0.0.0.0",
+  "data-sources.http.port": 9001
+}

@@ -1,0 +1,12 @@
+Naming convention
+----
+Suffix method/function with Future if they return a Future.
+
+For example,
+
+def parseCSVFuture(...params...): Future[] =
+
+Code placement
+----
+
+Keep the public methods earlier in file followed by protected followed by private.

@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.scienaptic.common.Launcher
+Main-Verticle: scala:com.scienaptic.datasources.DataSourcesAPIVerticle
+

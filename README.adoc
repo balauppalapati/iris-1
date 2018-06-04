@@ -1,0 +1,20 @@
+= Iris
+
+Run jar in foreground
+----
+java -jar -Dlog4j.configurationFile=config/log4j.xml api-gateway/target/scala-2.12/api-gateway-*.jar run scala:com.scienaptic.apigateway.APIGatewayVerticle -conf config/app.json
+java -jar -Dlog4j.configurationFile=config/log4j.xml data-sources/target/scala-2.12/data-sources-*.jar run scala:com.scienaptic.datasources.DataSourcesAPIVerticle -conf config/app.json
+
+java -agentlib:jdwp=transport=dt_socket,address=7777,server=y,suspend=y -jar -Dlog4j.configurationFile=config/log4j.xml data-sources/target/scala-2.12/data-sources-*.jar run scala:com.scienaptic.datasources.DataSourcesAPIVerticle -conf config/app.json
+
+----
+
+Run jar in background
+----
+java -jar -Dlog4j.configurationFile=config/log4j.xml api-gateway/target/scala-2.12/api-gateway-*.jar start -id api-gateway -conf config/app.json --redirect-output
+java -jar -Dlog4j.configurationFile=config/log4j.xml data-sources/target/scala-2.12/data-sources-*.jar start -id data-sources -conf config/app.json --redirect-output
+java -jar data-sources/target/scala-2.12/data-sources-*.jar stop data-sources
+java -jar data-sources/target/scala-2.12/data-sources-*.jar list
+----
+
+./consul agent -dev -ui -node iris

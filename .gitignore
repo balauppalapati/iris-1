@@ -1,0 +1,19 @@
+# build files
+target
+
+# runtime files
+.vertx
+
+# IDE
+.idea
+.vscode
+
+# Scala Worksheets
+*.sc
+
+# Log files
+*.log
+*.log.gz
+
+# Frontend
+web/
